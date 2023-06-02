@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+</head>
+<body>
+    <ul>
+        {% for article in article_list %}
+        <li><a href="{% url 'view' article.id %}">{{ article.title }}</a> | {{ article.name }} | {{ article.cdate|date:"D d M y" }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
